@@ -85,10 +85,10 @@ body {
 .clock::after {
   content: "";
   position: absolute;
-  background-color: #213213;
+  background-color: #140303;
   z-index: 15;
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -96,19 +96,19 @@ body {
 }
 
 .clock .hand.hour {
-  width: 8px;
-  height: 32%;
-  background-color: saddlebrown;
+  width: 12px;
+  height: 28%;
+  background-color: #202040;
 }
 
 .clock .hand.minute {
   width: 6px;
   height: 36%;
-  background-color: blueviolet;
+  background-color: #602080;
 }
 
 .clock .hand.second {
   width: 4px;
   height: 42%;
-  background-color: darkorange;
+  background-color: #b030b0;
 }
