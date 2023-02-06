@@ -1,4 +1,5 @@
-# Small Projects
-Small projects that don't deserve their separate repositories
+# Small projects
 
-1. Analog Clock using vanilla JS
+Projects that don't need a separate repository.
+
+- [Analog Clock using vanilla JS](./jsclock/)
