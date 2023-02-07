@@ -4,11 +4,11 @@ import useBookSearch from "./hooks/useBookSearch";
 export default function App() {
   const [query, setQuery] = useState<string>("");
   const [pageNumber, setPageNumber] = useState<number>(1);
+  const { loading, error, books, hasMore } = useBookSearch(query, pageNumber);
 
-  useBookSearch(query, pageNumber);
   function handleSearch(e: React.ChangeEvent<HTMLInputElement>) {
     setQuery(e.target.value);
-    setPageNumber(12);
+    setPageNumber(1);
   }
 
   return (
@@ -21,9 +21,11 @@ export default function App() {
         placeholder="Start typing a query"
         onChange={handleSearch}
       />
-      <div>sometext</div>
-      <div>Loading...</div>
-      <div>Error</div>
+      {books?.map((book) => {
+        return <div key={book}>{book}</div>;
+      })}
+      <div>{loading ? "Loading..." : ""}</div>
+      <div>{error ? "Error" : ""}</div>
     </>
   );
 }
