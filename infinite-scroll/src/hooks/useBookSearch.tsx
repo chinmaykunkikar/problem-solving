@@ -2,6 +2,8 @@ import axios, { Canceler } from "axios";
 import { useEffect, useState } from "react";
 
 export default function useBookSearch(query: string, pageNumber: number) {
+  const OPENLIBRARY_API_ENDPOINT = "https://openlibrary.org/search.json";
+
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<boolean>(false);
   const [books, setBooks] = useState<string[] | undefined>([]);
@@ -16,7 +18,7 @@ export default function useBookSearch(query: string, pageNumber: number) {
 
     axios({
       method: "GET",
-      url: "https://openlibrary.org/search.json",
+      url: OPENLIBRARY_API_ENDPOINT,
       params: { q: query, page: pageNumber },
       cancelToken: new axios.CancelToken((c) => (cancel = c)),
     })

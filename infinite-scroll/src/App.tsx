@@ -40,15 +40,27 @@ export default function App() {
       {books?.map((book, index) => {
         if (books.length === index + 1) {
           return (
-            <div ref={lastBookElRef} key={book}>
-              {book}
-            </div>
+            <>
+              <div ref={lastBookElRef} key={book} className="booktitle">
+                {book}
+              </div>
+            </>
           );
         }
-        return <div key={book}>{book}</div>;
+        return (
+          <>
+            <div key={book} className="booktitle">
+              {book}
+            </div>
+          </>
+        );
       })}
-      <div>{loading ? "Loading..." : ""}</div>
-      <div>{error ? "Error" : ""}</div>
+      <div className="loading">{loading ? "Loading results..." : ""}</div>
+      <div className="error">
+        {error
+          ? "Unfortunately, an error occured while fetching the results."
+          : ""}
+      </div>
     </>
   );
 }

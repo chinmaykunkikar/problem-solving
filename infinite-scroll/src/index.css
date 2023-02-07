@@ -76,6 +76,28 @@ input::placeholder {
   color: #999;
 }
 
+.booktitle {
+  padding: 8px 4px;
+  border-bottom: 2px dashed #ddd;
+  cursor: default;
+}
+
+.loading {
+  margin-top: 0.5em;
+  color: #535bf2;
+  font-weight: 500;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.error {
+  margin-top: 0.5em;
+  color: #e14e4e;
+  font-weight: 500;
+  font-size: 1em;
+  text-align: center;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
