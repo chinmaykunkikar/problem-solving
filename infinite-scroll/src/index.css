@@ -59,15 +59,21 @@ input {
   width: 16em;
   font-size: 1em;
   padding: 8px;
-  color: #242424;
+  color: #727272;
   border-radius: 4px;
-  border: 2px solid gray;
+  border: 2px solid #727272;
   margin-bottom: 1em;
 }
 
 input:focus {
-  border: 2px solid #ffffffff;
-  outline: 2px solid #646cff;
+  color: #242424;
+  border: 2px solid #646cff;
+  outline: none;
+}
+
+input::placeholder {
+  font-size: 0.7em;
+  color: #999;
 }
 
 @media (prefers-color-scheme: light) {
