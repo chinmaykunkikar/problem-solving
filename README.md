@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Problem solving
 
 ## Data Structures and Algorithms
@@ -12,3 +11,4 @@
 
 1. [Analog Clock using vanilla JS](./machine-coding/jsclock/)
 2. [Framer Motion modal](./machine-coding/framer-modal/)
+3. [Infinite scroll (React)](./machine-coding/framer-modal/)
